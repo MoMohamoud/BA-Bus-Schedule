@@ -6,7 +6,6 @@
 	<!-- Latest compiled and minified CSS -->
   
 	<link href="style.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>   
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -85,6 +84,15 @@
 	
 		
 	?>
+
+	<script type="text/javascript">
+	$('[data-toggle=tab]').click(function(){
+  if ($(this).parent().hasClass('active')){
+	$($(this).attr("href")).toggleClass('active');
+  }
+})
+
+	</script>
 	
 	<main class="container bus-selection" id="destination1">
 		<div class="row">
@@ -99,7 +107,7 @@
 
 					<div class="row">
 						<div class="tab-content">
-							<div id="169_Ball" class="tab-pane fade active">
+							<div id="169_Ball" class="tab-pane fade in active">
 								<div class="col-sm-12 mrg-va ba-brand pad-t-a">
 									<h2><?php echo $title169East; ?></h2>
 									<h2><h5 class="destination">Destination:</h5> <?php echo $destination169East; ?></h2>
@@ -121,7 +129,7 @@
 								</div>
 							</div>
 							
-							<div id="169_Braid" class="tab-pane fade">
+							<div id="169_Braid" class="tab-pane fade in">
 								<div class="col-sm-12 mrg-va home-brand pad-t-a">
 
 									<h2><?php echo $title169West; ?></h2>
@@ -155,7 +163,7 @@
 		    	<section class="bus" id="myTab">
 					<div class="row">
 						<div class="tab-content">
-							<div id="153_Ball" class="tab-pane fade active">
+							<div id="153_Ball" class="tab-pane fade in active">
 
 								<div class="col-sm-12 mrg-va ba-brand pad-t-a">
 								 	<h2><?php echo $title153West; ?></h2>
@@ -215,10 +223,10 @@
 				<section class=" bus" id="myTab">
 					<div class="row">
 						<div class="tab-content">
-							<div id="156_Ball" class="tab-pane fade active">
+							<div id="156_Ball" class="tab-pane fade in active">
 								<div class="col-sm-12 mrg-va ba-brand pad-t-a">
 									<h2><?php echo $title156West; ?></h2>
-									<h2><h5 class="destination">Destination:</h5> <?php echo $destination156West; ?></h2>
+									<h2><h5 class="destination">Destination:</h5> <?php echo substr($destination156West,0,12); ?></h2>
 
 									<?php 	$leavetime156West = $xml153and156West->NextBus[1]->Schedules->Schedule ?>
 									<?php $upcomingtime156West=$leavetime156West->ExpectedLeaveTime[0] ?>
@@ -241,7 +249,7 @@
 							<div id="156_Braid" class="tab-pane fade">
 								<div class="col-sm-12 mrg-va home-brand pad-t-a">
 									<h2><?php echo $title156East; ?></h2>
-									<h2><h5 class="destination">Destination:</h5> <?php echo $destination156East; ?></h2>
+									<h2><h5 class="destination">Destination:</h5> <?php echo substr($destination156East,0,9); ?></h2>
 
 									<?php 	$leavetime156East = $xml153and156East->NextBus->Schedules->Schedule ?>
 									<?php $upcomingtime156East =$leavetime153East->ExpectedLeaveTime[0] ?>
