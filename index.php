@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
 
 
 
@@ -85,14 +86,7 @@
 		
 	?>
 
-	<script type="text/javascript">
-	$('[data-toggle=tab]').click(function(){
-  if ($(this).parent().hasClass('active')){
-	$($(this).attr("href")).toggleClass('active');
-  }
-})
 
-	</script>
 	
 	<main class="container bus-selection" id="destination1">
 		<div class="row">
