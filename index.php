@@ -98,10 +98,23 @@
 		<div class="row">
 			<div class="col-sm-4" id="169">
 				<h1>169</h1>
-				<ul class="nav nav-justified" id="myTab">
+				<!-- <ul class="nav nav-justified" id="myTab">
 			        <li><a data-toggle="tab" href="#169_Braid">To Braid Station</a></li>
 			        <li><a data-toggle="tab" href="#169_Ball">To Ballistic</a></li>
-		    	</ul>
+		    	</ul> -->
+		    	
+			    	
+				    <a data-toggle="tab" href="#169_Braid">
+				        <button class="nav nav-justified" id="myTab">To Braid Station</button>
+				    </a>
+		    		
+
+		    	
+			     
+			        <a data-toggle="tab" href="#169_Ball">
+			        	<button class="nav nav-justified" id="myTab">To Ballistic</button>
+			        </a>
+		    	
 			    <section class=" bus">
 
 
@@ -226,7 +239,9 @@
 							<div id="156_Ball" class="tab-pane fade in active">
 								<div class="col-sm-12 mrg-va ba-brand pad-t-a">
 									<h2><?php echo $title156West; ?></h2>
+
 									<h2><h5 class="destination">Destination:</h5> <?php echo substr($destination156West,0,12); ?></h2>
+
 
 									<?php 	$leavetime156West = $xml153and156West->NextBus[1]->Schedules->Schedule ?>
 									<?php $upcomingtime156West=$leavetime156West->ExpectedLeaveTime[0] ?>
@@ -251,8 +266,8 @@
 									<h2><?php echo $title156East; ?></h2>
 									<h2><h5 class="destination">Destination:</h5> <?php echo substr($destination156East,0,9); ?></h2>
 
-									<?php 	$leavetime156East = $xml153and156East->NextBus->Schedules->Schedule ?>
-									<?php $upcomingtime156East =$leavetime153East->ExpectedLeaveTime[0] ?>
+									<?php 	$leavetime156East = $xml153and156East->NextBus[1]->Schedules->Schedule ?>
+									<?php $upcomingtime156East =$leavetime156East->ExpectedLeaveTime[0] ?>
 									<h5>Next bus at <span class="bus-arrives"><?php echo substr($upcomingtime156East, 0, 7); ?></span></h5>
 
 									<?php $arrives_156East = (string) $leavetime156East->ExpectedCountdown;?>
