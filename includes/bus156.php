@@ -27,21 +27,13 @@ $destination156West = $xml153and156West->NextBus[1]->Schedules->Schedule->Destin
 			<div id="156_Ball" class="tab-pane fade in active">
 				<div class="col-sm-12 mrg-va ba-brand pad-t-a">
 					<h2><?php echo $title156West; ?></h2>
-
 					<h2><h5 class="destination">Destination:</h5> <?php echo substr($destination156West,0,12); ?></h2>
-
-
 					<?php 	$leavetime156West = $xml153and156West->NextBus[1]->Schedules->Schedule ?>
 					<?php $upcomingtime156West=$leavetime156West->ExpectedLeaveTime[0] ?>
 					<h5>Next bus at <span class="bus-arrives"><?php echo substr($upcomingtime156West, 0, 7); ?></span></h5>
-					
-
 					<?php $arrives_156West = (string) $leavetime156West->ExpectedCountdown;?>
-
 					<h5>Bus arrives in <span class="bus-arrives"><?php echo $arrives_156West; ?></span> minutes</h5>
-
 					<h5>Bus Arrival Times:</h5>
-
 					<?php foreach ($leavetime156West as $west) : ?>
 						<?php $time=$west->ExpectedLeaveTime;  ?>
 						<h3> <?php echo substr($time,0, 7); ?></h3>	
@@ -53,16 +45,12 @@ $destination156West = $xml153and156West->NextBus[1]->Schedules->Schedule->Destin
 				<div class="col-sm-12 mrg-va home-brand pad-t-a">
 					<h2><?php echo $title156East; ?></h2>
 					<h2><h5 class="destination">Destination:</h5> <?php echo substr($destination156East,0,9); ?></h2>
-
 					<?php 	$leavetime156East = $xml153and156East->NextBus[1]->Schedules->Schedule ?>
 					<?php $upcomingtime156East =$leavetime156East->ExpectedLeaveTime[0] ?>
 					<h5>Next bus at <span class="bus-arrives"><?php echo substr($upcomingtime156East, 0, 7); ?></span></h5>
-
 					<?php $arrives_156East = (string) $leavetime156East->ExpectedCountdown;?>
 					<h5>Bus arrives in <span class="bus-arrives"><?php echo $arrives_156East; ?></span> minutes</h5>
-
 					<h5>Bus Arrival Times:</h5>
-
 					<?php foreach ($leavetime156East as $east) : ?>
 						<?php $time=$east->ExpectedLeaveTime;  ?>
 						<h3> <?php echo substr($time,0, 7); ?></h3>	
